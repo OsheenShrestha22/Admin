@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<body>
+
+		<!-- Navbar -->
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Products
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="#">Manage Products</a>
+							<a class="dropdown-item" href="#">Add Products</a>
+							<a class="dropdown-item" href="#">Media Center</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Oders
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="#">Manage Order</a>
+							<a class="dropdown-item" href="#">Manage Reviews</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Promotion
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="#">Campaign Management</a>
+							<a class="dropdown-item" href="#">Seller Voucher</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Finance
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="#">Account Statements</a>
+							<a class="dropdown-item" href="#">Order Overview</a>
+							<a class="dropdown-item" href="#">Transaction Overview</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+
+		<!-- BreadCrumb -->
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Promotion</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Campaign Management</li>
+			</ol>
+		</nav>
+
+<div class="jumbotron" style="margin-bottom: 0px;">
+			<h3>Campaign Management</h3>
+		</div>
+<div class="jumbotron" style="margin-bottom: 0px;">
+			<h3>Platform Campaign</h3>
+		</div>
+
+
+	<div>
+	<p style="font-weight: bold;">Available Campaign  |Registered Campaign</p>
+	</div>
+
+
+
+
+		<div class="container-fluid nav-buttons">
+			<form class="form-inline">
+				<button class="btn btn-outline-success my-2 my-sm-0 btn-margin"
+				type="button" onclick="{% url 'add_product' %}">
+				Registration in Progress
+			</button>
+
+			<button class="btn btn-outline-success my-2 my-sm-0 btn-margin"
+			type="submit">
+			Registration Completed
+		</button>
+
+		<button class="btn btn-outline-success my-2 my-sm-0 btn-margin"
+		type="submit">
+		online
+	</button>
+
+<button class="btn btn-outline-success my-2 my-sm-0 btn-margin"
+type="submit">
+offline
+</button>
+</form>
+
+
+
+<!-- Table -->
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+		
+				<th scope="col">Campaing  Banner</th>
+				<th scope="col">Campaign Name</th>
+				<th scope="col">Status</th>
+				<th scope="col">Registration time </th>
+				<th scope="col">Campaign live Period </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<form >
+				
+				
+					<td>Place holder for pic hai chitre </td>
+					<td> 11.11 - All seller</td>
+					<td>Registration in Progress</td>
+						<td>Date </td>
+							<td>start at ..... end at .......</td>
+					
+				</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+</div> 
