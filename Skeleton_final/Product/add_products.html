@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<body>
+
+        <!-- Navbar -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Products
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="C:/Users/Lenovo/Desktop/Skeleton/Product/manage_products.html" target="_blank">Manage Products</a>
+                            <a class="dropdown-item" href="C:/Users/Lenovo/Desktop/Skeleton/Product/add_products.html" target="_blank">Add Products</a>
+                            <a class="dropdown-item" href="C:/Users/Lenovo/Desktop/Skeleton/Product/media_center.html" target="_blank">Media Center</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Oders
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="C:/Users/Lenovo/Desktop/Skeleton/Order/Manage_order.html" target="_blank">Manage Order</a>
+                            <a class="dropdown-item" href="C:/Users/Lenovo/Desktop/Skeleton/Order/Manage Review/Product_Review.html" target="_blank">Manage Reviews</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Promotion
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="C:/Users/Lenovo/Desktop/Skeleton/Promotion/Campaign%20Management/available_campaign.html" target="_blank">Campaign Management</a>
+                            <a class="dropdown-item" href="C:/Users/Lenovo/Desktop/Skeleton/Promotion/seller_voucher/seller_voucher.html" target="_blank">Seller Voucher</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Finance
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="C:/Users/Lenovo/Desktop/Skeleton/Finance/account_statement.html" target="_blank">Account Statements</a>
+                            <a class="dropdown-item" href="C:/Users/Lenovo/Desktop/Skeleton/Finance/order_overview.html" target="_blank">Order Overview</a>
+                            <a class="dropdown-item" href="C:/Users/Lenovo/Desktop/Skeleton/Finance/transaction_overview.html" target="_blank">Transaction Overview</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- BreadCrumb -->
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Products</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Add Products</li>
+            </ol>
+        </nav>  
+    <div class="jumbotron" style="margin-bottom: 0;">
+        <h3>Add New Products</h3>	
+    </div>
+
+    <div class="container">
+        <form class="form-horizontal" method="post" enctype="multipart/form-data">
+
+            <div class="form-group row">
+                <label class=" col-md-4 offset-md-2 control-label" for="product_id">Item Code</label>
+                <div class="col-md-6">
+                    <input id="product_id" name="item_code" placeholder="PRODUCT ID" class="form-control input-md"
+                           required=""
+                           type="text">
+                </div>
+            </div>
+
+            <!-- -->
+            <div class="form-group row">
+                <label class="col-md-4 offset-md-2 control-label" for="product_name">Product Name</label>
+                <div class="col-md-6">
+                    <input id="product_name" name="name" placeholder="PRODUCT NAME" class="form-control input-md"
+                           required="" type="text">
+
+                </div>
+            </div>
+
+            <!-- Select Category -->
+            <div class="form-group row">
+                <label class="col-md-4 offset-md-2 control-label" for="product_category">Product Category</label>
+                <div class="col-md-6">
+                    <select id="product_category" name="category" class="form-control">
+                        {% for id, name in form.fields.category.choices %}
+                            {% if name != '---------' %}
+                                <option value="{{ id }}">
+                                    {{ name }}
+                                </option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+
+            <!-- Gender input -->
+            <div class="form-group row">
+                <label class="col-md-4 offset-md-2 control-label" for="gender">Gender</label>
+                <div class="col-md-6">
+                    <select id="gender" name="gender" class="form-control">
+                        <option value="MALE">MALE</option>
+                        <option value="FEMALE">FEMALE</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Select Subcategory -->
+            <div class="form-group row">
+                <label class="col-md-4 offset-md-2 control-label" for="product_subcategory">Product Subcategory</label>
+                <div class="col-md-6">
+                    <select id="product_subcategory" name="subcategory" class="form-control">
+
+                    </select>
+                </div>
+            </div>
+
+            <!-- Sale Price -->
+            <div class="form-group row">
+                <label class="col-md-4 offset-md-2 control-label" for="sale_price">Sale Price</label>
+                <div class="col-md-6">
+                    <input id="sale_price" name="sale_price" placeholder="SALE PRICE" class="form-control input-md"
+                           required type="number">
+
+                </div>
+            </div>
+
+            <!-- Retail Price -->
+            <div class="form-group row">
+                <label class="col-md-4 offset-md-2 control-label" for="retail_price">Retail Price</label>
+                <div class="col-md-6">
+                    <input id="retail_price" name="retail_price" placeholder="RETAIL PRICE"
+                           class="form-control input-md"
+                           required type="number">
+
+                </div>
+            </div>
+
+            <!-- File Button -->
+            <div class="form-group row">
+                <label class="col-md-4 offset-md-2 control-label" for="filebutton1">Main Image</label>
+                <div class="col-md-6">
+                    <input id="filebutton1" name="photo" class="input-file" type="file">
+                </div>
+            </div>
+
+            <!-- File Button -->
+            <div class="form-group row">
+                <label class="col-md-4 offset-md-2 control-label" for="filebutton2">Auxiliary Image One</label>
+                <div class="col-md-6">
+                    <input id="filebutton2" name="second_photo" class="input-file" type="file">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-md-4 offset-md-2 control-label" for="filebutton3">Auxiliary Image Two</label>
+                <div class="col-md-6">
+                    <input id="filebutton3" name="third_photo" class="input-file" type="file">
+                </div>
+            </div>
+            <p class="warning offset-md-2 text-danger">* Images must be of aspect ratio 1.25 and size less than
+                800KB</p>
+
+            <div class="form-group row">
+                <label class="col-md-4 offset-md-2 control-label" for="filebutton">Tags</label>
+                <div class="col-md-6">
+                    <input type="text" data-role="tagsinput" name="tag">
+                </div>
+            </div>
+
+
+            <div id="add_block">
+
+            </div>
+
+            <button type="button" id="add_color detail" onclick="createBlock()"
+                    class="offset-md-2 btn btn-primary mb-3">
+                Add Color And Size Details
+            </button>
+
+
+         
+
+            <!-- Button -->
+            <div class="form-group row">
+                <div class="col-md-6 offset-md-2">
+                    <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+    <script src="{% static 'custom_admin/add_product/script.js' %}"></script>
+
+    <script>
+        $(function () {
+            $('#gender').click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/admin/get_subcategory/",
+                    data: {
+                        'gender': $('#gender').val(),
+                        'category': $('#product_category').val(),
+                        'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+                    },
+                    success: addSubCategories,
+                    dataType: 'html'
+                })
+            })
+        })
+        $(function () {
+            $('#product_category').click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/admin/get_subcategory/",
+                    data: {
+                        'gender': $('#gender').val(),
+                        'category': $('#product_category').val(),
+                        'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+                    },
+                    success: addSubCategories,
+                    dataType: 'html'
+                })
+            })
+        })
+
+        function addSubCategories(data, textSuccess, jqXHR) {
+            {#console.log(data);#}
+            $('#product_subcategory').html(data)
+        }
+    </script>
+{% endblock %}
+
+	</body>
+</html>
